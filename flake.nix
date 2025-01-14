@@ -32,6 +32,16 @@
       services.nix-daemon.enable = true;
       nix.settings.experimental-features = "nix-command flakes";
       programs.fish.enable = true;
+
+      nix.gc.automatic = true;
+      nix.gc.interval = {
+        Hour = 2;
+      };
+
+      nix.optimise.automatic = true;
+      nix.optimise.interval = {
+        Hour = 2;
+      };
     };
   in {
     darwinConfigurations."HQ8968OSX" = nix-darwin.lib.darwinSystem {
