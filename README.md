@@ -7,5 +7,5 @@ Used in tandem with my [mac home manager setup](https://github.com/palani-johnso
 ## Rebuild
 
 ```sh
-darwin-rebuild switch --flake ~/.config/nix-darwin
+sudo darwin-rebuild switch --flake ~/.config/nix-darwin
 ```

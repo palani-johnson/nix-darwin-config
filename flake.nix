@@ -23,11 +23,11 @@
       nixpkgs.hostPlatform = "aarch64-darwin";
       nixpkgs.config.allowUnfree = true;
 
-      environment.systemPackages = with pkgs; [
-        vim
-        git
-        curl
-        wget
+      environment.systemPackages = [
+        pkgs.vim
+        pkgs.git
+        pkgs.curl
+        pkgs.wget
       ];
 
       nix.settings.experimental-features = "nix-command flakes";
