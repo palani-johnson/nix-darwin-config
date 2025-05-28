@@ -21,6 +21,7 @@
 
       users.users.pjohnso3.home = "/Users/pjohnso3";
       nixpkgs.hostPlatform = "aarch64-darwin";
+      nixpkgs.config.allowUnfree = true;
 
       environment.systemPackages = with pkgs; [
         vim
@@ -30,6 +31,7 @@
       ];
 
       nix.settings.experimental-features = "nix-command flakes";
+      nix.settings.warn-dirty = false;
       programs.fish.enable = true;
 
       nix.gc.automatic = true;
