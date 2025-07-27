@@ -43,6 +43,8 @@
       nix.optimise.interval = {
         Hour = 2;
       };
+
+      security.pam.services.sudo_local.touchIdAuth = true;
     };
   in {
     darwinConfigurations."HQ8968OSX" = nix-darwin.lib.darwinSystem {
