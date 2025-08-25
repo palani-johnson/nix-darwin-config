@@ -15,6 +15,7 @@
   }: let
     configuration = {pkgs, ...}: {
       system = {
+        primaryUser = "pjohnso3";
         stateVersion = 5;
         configurationRevision = self.rev or self.dirtyRev or null;
       };
