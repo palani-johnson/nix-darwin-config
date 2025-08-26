@@ -3,6 +3,7 @@
   self,
   ...
 }: {
+  # Basic system configuration
   system = {
     primaryUser = "pjohnso3";
     stateVersion = 5;
@@ -13,17 +14,18 @@
   nixpkgs.hostPlatform = "aarch64-darwin";
   nixpkgs.config.allowUnfree = true;
 
+  # Packages
+  programs.fish.enable = true;
   environment.systemPackages = [
     pkgs.vim
     pkgs.git
     pkgs.curl
     pkgs.wget
-    pkgs.home-manager
   ];
 
+  # Nix settings
   nix.settings.experimental-features = "nix-command flakes";
   nix.settings.warn-dirty = false;
-  programs.fish.enable = true;
 
   nix.gc.automatic = true;
   nix.gc.interval.Hour = 2;
@@ -31,5 +33,6 @@
   nix.optimise.automatic = true;
   nix.optimise.interval.Hour = 2;
 
+  # etc
   security.pam.services.sudo_local.touchIdAuth = true;
 }
