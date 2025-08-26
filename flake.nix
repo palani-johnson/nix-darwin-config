@@ -27,7 +27,6 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.users.pjohnso3 = import ./modules/home;
-          home-manager.verbose = true;
         }
       ];
       specialArgs = {

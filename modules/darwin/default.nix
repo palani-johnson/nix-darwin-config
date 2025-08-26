@@ -10,6 +10,8 @@
     configurationRevision = self.rev or self.dirtyRev or null;
   };
 
+  security.pam.services.sudo_local.touchIdAuth = true;
+
   users.users.pjohnso3.home = "/Users/pjohnso3";
   nixpkgs.hostPlatform = "aarch64-darwin";
   nixpkgs.config.allowUnfree = true;
@@ -33,6 +35,6 @@
   nix.optimise.automatic = true;
   nix.optimise.interval.Hour = 2;
 
-  # etc
-  security.pam.services.sudo_local.touchIdAuth = true;
+  # Services
+  services.skhd.enable = true;
 }
