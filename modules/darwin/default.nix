@@ -36,5 +36,5 @@
   nix.optimise.interval.Hour = 2;
 
   # Services
-  services.skhd.enable = true;
+  # services.skhd.enable = true;
 }
