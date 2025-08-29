@@ -59,10 +59,6 @@ in {
       recursive = true;
     };
 
-    file.".config/test.txt" = {
-      text = "${pkgs.nushell}";
-    };
-
     shell.enableShellIntegration = true;
   };
 
