@@ -18,6 +18,8 @@ in {
     username = me;
     homeDirectory = homeDir;
     stateVersion = "24.11";
+
+    # make sure these are not gui programs
     packages = [
       # nix
       pkgs.nil
@@ -46,9 +48,6 @@ in {
 
       # azure
       (pkgs.azure-cli.withExtensions [pkgs.azure-cli.extensions.containerapp])
-
-      # bitwarden
-      pkgs.bitwarden-desktop
     ];
 
     sessionVariables = sessionVariables;

@@ -12,28 +12,44 @@
 
   security.pam.services.sudo_local.touchIdAuth = true;
 
-  users.users.pjohnso3.home = "/Users/pjohnso3";
+  users.users.pjohnso3 = {
+    home = "/Users/pjohnso3";
+  };
   nixpkgs.hostPlatform = "aarch64-darwin";
   nixpkgs.config.allowUnfree = true;
 
   # Packages
   programs.fish.enable = true;
   environment.systemPackages = [
+    # Command line tools
     pkgs.vim
     pkgs.git
     pkgs.curl
     pkgs.wget
+
+    # Games
+    pkgs.prismlauncher
+
+    # Bitwarden
+    pkgs.bitwarden-desktop
   ];
 
   # Nix settings
-  nix.settings.experimental-features = "nix-command flakes";
-  nix.settings.warn-dirty = false;
+  nix = {
+    settings.experimental-features = "nix-command flakes";
+    settings.warn-dirty = false;
 
-  nix.gc.automatic = true;
-  nix.gc.interval.Hour = 2;
+    gc = {
+      automatic = true;
+      interval.Hour = 2;
+      options = "--delete-old";
+    };
 
-  nix.optimise.automatic = true;
-  nix.optimise.interval.Hour = 2;
+    optimise = {
+      automatic = true;
+      interval.Hour = 2;
+    };
+  };
 
   # Services
   # services.skhd.enable = true;
