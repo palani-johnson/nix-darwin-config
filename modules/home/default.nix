@@ -11,7 +11,7 @@
     GOMODCACHE = "$XDG_CACHE_HOME/go/mod";
 
     # Bitwarden SSH Agent
-    SSH_AUTH_SOCK = "/Users/pjohnso3/.bitwarden-ssh-agent.sock";
+    SSH_AUTH_SOCK = "/Users/pjohnso3/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock";
   };
 in {
   home = {

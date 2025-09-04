@@ -29,9 +29,6 @@
 
     # Games
     pkgs.prismlauncher
-
-    # Bitwarden
-    pkgs.bitwarden-desktop
   ];
 
   # Nix settings
