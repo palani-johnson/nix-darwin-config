@@ -29,6 +29,9 @@
 
     # Games
     pkgs.prismlauncher
+
+    # VMs
+    pkgs.utm
   ];
 
   # Nix settings
