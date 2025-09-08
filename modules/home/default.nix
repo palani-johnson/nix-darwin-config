@@ -24,6 +24,7 @@ in {
       # nix
       pkgs.nil
       pkgs.alejandra
+      pkgs.devenv
 
       # docker
       pkgs.docker
