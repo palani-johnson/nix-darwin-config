@@ -38,6 +38,7 @@
   nix = {
     settings.experimental-features = "nix-command flakes";
     settings.warn-dirty = false;
+    settings.trusted-users = ["pjohnso3" "root"];
 
     gc = {
       automatic = true;
