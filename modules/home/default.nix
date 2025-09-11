@@ -33,7 +33,10 @@ in {
       pkgs.kubectl
 
       # python
-      (pkgs.python3.withPackages (p: [p.ipykernel]))
+      (pkgs.python3.withPackages (p: [
+        p.ipykernel
+        p.nbconvert
+      ]))
       pkgs.ruff
 
       # just
