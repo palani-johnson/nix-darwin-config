@@ -14,6 +14,11 @@ $env.config = {
         sync_on_enter: true
         isolation: true
     }
+
+    table: {
+        mode: "none"
+        index_mode: "auto"
+    }
 }
 
 # Dev shell patches
